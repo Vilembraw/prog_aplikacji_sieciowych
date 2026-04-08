@@ -10,7 +10,8 @@ payload = binary_packet[8:]
 data_str = payload.decode('ascii')
 
 # Format: zad14odp;src;X;dst;Y;data;Z
-message = f"zad13odp;src;2900;dst;35211;data;test"
+# message = f"zad13odp;src;2900;dst;35211;data;test"
+message = f"zad13odp;src;{src_port};dst;{dst_port};data;{data_str}"
 print(f"Wysyłana wiadomość: {message}")
 
 # server_address = ('212.182.24.27', 2910)

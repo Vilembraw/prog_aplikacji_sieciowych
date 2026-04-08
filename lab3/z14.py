@@ -10,7 +10,8 @@ dst_port = int.from_bytes(segment[2:4], byteorder='big')
 data_offset = (segment[12] >> 4) * 4
 data = segment[data_offset:].decode('utf-8')
 
-message = f"zad13odp;src;{src_port};dst;{dst_port};data;{data}"
+# message = f"zad13odp;src;{src_port};dst;{dst_port};data;{data}"
+message = f"zad14odp;src;{src_port};dst;{dst_port};data;{data}"
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.settimeout(5.0)
